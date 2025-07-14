@@ -8,7 +8,7 @@ import streamlit as st
 from transformers import pipeline
 
 class LoanQABot:
-    def _init_(self, data_path: str):
+    def __init__(self, data_path: str):
         """Initialize the Loan QA Bot with data and embeddings."""
         self.df = pd.read_csv(data_path)
         self.model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
