@@ -1,10 +1,11 @@
+# Try these potentially more compatible versions
 python-3.10.12
-torch==2.1.2
-transformers==4.35.2
+torch==2.0.1
+transformers==4.30.2
 sentence-transformers==2.2.2
-faiss-cpu==1.7.4  # Downgraded for compatibility
-streamlit==1.46.1
-pandas==2.1.3
-numpy==1.26.2
-scikit-learn==1.3.2
-accelerate==0.24.1
+faiss-cpu==1.7.4
+streamlit==1.22.0
+pandas==1.5.3
+numpy==1.23.5
+scikit-learn==1.2.2
+accelerate==0.19.0
