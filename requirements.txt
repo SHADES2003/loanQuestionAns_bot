@@ -1,10 +1,10 @@
-python-version=3.10
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.1.2
+transformers==4.35.2
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4  # Downgraded for compatibility
+streamlit==1.46.1
 pandas==2.1.3
 numpy==1.26.2
-sentence-transformers==2.2.2
-faiss-cpu==1.7.4  # Downgraded for better compatibility
-streamlit==1.46.1
-transformers==4.35.2
-torch==2.1.2  # Slightly older version for stability
-accelerate==0.24.1
 scikit-learn==1.3.2
+accelerate==0.24.1
