@@ -11,15 +11,21 @@ class LoanQABot:
     def __init__(self, data_path: str):
         """Initialize the Loan QA Bot with data and embeddings."""
         self.df = pd.read_csv(data_path)
-        self.model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+        # self.model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
         self.setup_embeddings()
         
         # Initialize a more powerful model for text generation
-        self.qa_model = pipeline(
+        # self.qa_model = pipeline(
+        #     "text2text-generation",
+        #     model="google/flan-t5-large",  # Using a larger model
+        #     max_length=256  # Allowing longer responses
+        # )
+       self.model = SentenceTransformer('all-MiniLM-L6-v2')  # Smaller model name
+       self.qa_model = pipeline(
             "text2text-generation",
-            model="google/flan-t5-large",  # Using a larger model
-            max_length=256  # Allowing longer responses
-        )
+             model="google/flan-t5-base",  # Smaller version
+             max_length=256
+      )
 
     def setup_embeddings(self):
         """Create and store embeddings for the dataset."""
